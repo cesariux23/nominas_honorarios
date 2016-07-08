@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>234</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>464</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Datos de la quincena</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>45</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Quincena</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Primera</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Segunda</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mes</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_3">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>20</y>
+         <width>80</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Enero</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Febrero</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Marzo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Abril</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mayo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Junio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Julio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Agosto</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Septiembre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Octubre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Noviembre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Diciembre</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>20</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Tipo</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>20</y>
+         <width>94</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Ordinaria</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Extraordinaria</string>
+        </property>
+       </item>
+      </widget>
+      <zorder>label</zorder>
+      <zorder>comboBox_2</zorder>
+      <zorder>label_6</zorder>
+      <zorder>comboBox_3</zorder>
+      <zorder>label_2</zorder>
+      <zorder>comboBox</zorder>
+      <zorder>groupBox_2</zorder>
+      <zorder>groupBox_2</zorder>
+      <zorder>groupBox_2</zorder>
+      <zorder>groupBox_2</zorder>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>464</width>
+        <height>266</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Nominas a aperturar</string>
+      </property>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nueva nomina</string>
+       </property>
+      </widget>
+      <widget class="QTreeWidget" name="treeWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>441</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>q</string>
+        </property>
+       </item>
+      </widget>
+      <zorder>groupBox</zorder>
+      <zorder>pushButton</zorder>
+      <zorder>treeWidget</zorder>
+      <zorder>groupBox</zorder>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
