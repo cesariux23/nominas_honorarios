@@ -1,7 +1,12 @@
 import sys
+import locale
+
 from PyQt5.QtWidgets import QApplication, QDialog
 from loginDialog import *
 from nominaMainWindow import *
+
+# Establecemos el locale de nuestro sistema
+locale.setlocale(locale.LC_ALL, "")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
