@@ -6,54 +6,82 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>856</width>
-    <height>520</height>
+    <width>586</width>
+    <height>217</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>DRH :: Nomina honorarios</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>&lt;h1&gt;Quincena actual&lt;/h1&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>&lt;h3&gt;Honorarios&lt;/h3&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QListView" name="listView"/>
-    </item>
-   </layout>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>223</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:xx-large; font-weight:600;&quot;&gt;QUINCENA ACTUAL:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="gp_nominas">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>551</width>
+      <height>87</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Nominas en proceso</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>551</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>37</width>
+         <height>17</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="lb_quincena_actual">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:xx-large; font-weight:600; color:#005500;&quot;&gt;2da quincena de julio de 2016&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>856</width>
+     <width>586</width>
      <height>21</height>
     </rect>
    </property>
@@ -63,7 +91,69 @@
     </property>
     <addaction name="actionSalir"/>
    </widget>
+   <widget class="QMenu" name="menuNominas">
+    <property name="title">
+     <string>Nominas</string>
+    </property>
+    <addaction name="actionAperturar_nomina"/>
+    <addaction name="actionCerrar_nomina"/>
+    <addaction name="separator"/>
+    <addaction name="actionNueva_nomina"/>
+    <addaction name="separator"/>
+    <addaction name="actionConsultar_nominas_anteriores"/>
+    <addaction name="actionBuscar"/>
+   </widget>
+   <widget class="QMenu" name="menuEmpleados">
+    <property name="title">
+     <string>Empleados</string>
+    </property>
+    <addaction name="actionVer_listado"/>
+    <addaction name="actionRegistrar_empleado"/>
+    <addaction name="actionBuscar_2"/>
+   </widget>
+   <widget class="QMenu" name="menuCat_logos">
+    <property name="title">
+     <string>Catálogos</string>
+    </property>
+    <addaction name="actionQuincenas"/>
+    <addaction name="actionConceptos_de_nomina"/>
+    <addaction name="actionTipos_de_nomina"/>
+    <addaction name="actionAdscripciones"/>
+   </widget>
+   <widget class="QMenu" name="menuReportes">
+    <property name="title">
+     <string>Reportes</string>
+    </property>
+    <widget class="QMenu" name="menuEmpleados_2">
+     <property name="title">
+      <string>Empleados</string>
+     </property>
+     <addaction name="actionPor_adscripci_n"/>
+    </widget>
+    <widget class="QMenu" name="menuNominas_3">
+     <property name="title">
+      <string>Nominas</string>
+     </property>
+     <addaction name="actionNomina"/>
+     <addaction name="actionConcentrado_por_adscripci_n"/>
+     <addaction name="actionConcentrado_por_banco"/>
+    </widget>
+    <widget class="QMenu" name="menuLayouts">
+     <property name="title">
+      <string>Layouts</string>
+     </property>
+     <addaction name="actionPago_por_banco"/>
+     <addaction name="actionTimbrado"/>
+    </widget>
+    <addaction name="menuEmpleados_2"/>
+    <addaction name="menuNominas_3"/>
+    <addaction name="menuLayouts"/>
+   </widget>
    <addaction name="menuArchivo"/>
+   <addaction name="menuNominas"/>
+   <addaction name="menuEmpleados"/>
+   <addaction name="menuCat_logos"/>
+   <addaction name="menuReportes"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSalir">
@@ -71,13 +161,130 @@
     <string>Salir</string>
    </property>
    <property name="statusTip">
-    <string>Slir de la paplicación</string>
+    <string>Salir de la aplicación</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
    </property>
   </action>
+  <action name="actionAperturar_nomina">
+   <property name="text">
+    <string>Aperturar quincena</string>
+   </property>
+  </action>
+  <action name="actionCerrar_nomina">
+   <property name="text">
+    <string>Cerrar quincena</string>
+   </property>
+  </action>
+  <action name="actionConsultar_nominas_anteriores">
+   <property name="text">
+    <string>Consultar nominas anteriores</string>
+   </property>
+  </action>
+  <action name="actionBuscar">
+   <property name="text">
+    <string>Buscar ...</string>
+   </property>
+  </action>
+  <action name="actionNueva_nomina">
+   <property name="text">
+    <string>Nueva nomina</string>
+   </property>
+  </action>
+  <action name="actionRegistrar_empleado">
+   <property name="text">
+    <string>Registrar empleado</string>
+   </property>
+  </action>
+  <action name="actionVer_listado">
+   <property name="text">
+    <string>Ver listado</string>
+   </property>
+  </action>
+  <action name="actionBuscar_2">
+   <property name="text">
+    <string>Buscar empleado...</string>
+   </property>
+  </action>
+  <action name="actionQuincenas">
+   <property name="text">
+    <string>Quincenas</string>
+   </property>
+  </action>
+  <action name="actionConceptos_de_nomina">
+   <property name="text">
+    <string>Conceptos de nomina</string>
+   </property>
+  </action>
+  <action name="actionTipos_de_nomina">
+   <property name="text">
+    <string>Tipos de nomina</string>
+   </property>
+  </action>
+  <action name="actionAdscripciones">
+   <property name="text">
+    <string>Adscripciones</string>
+   </property>
+  </action>
+  <action name="actionPor_adscripci_n">
+   <property name="text">
+    <string>Por adscripción</string>
+   </property>
+  </action>
+  <action name="actionConcentrado">
+   <property name="text">
+    <string>Concentrado</string>
+   </property>
+  </action>
+  <action name="actionPor_adscripci_n_2">
+   <property name="text">
+    <string>Por adscripción</string>
+   </property>
+  </action>
+  <action name="actionNomina">
+   <property name="text">
+    <string>Desglose de nomina</string>
+   </property>
+  </action>
+  <action name="actionConcentrado_por_adscripci_n">
+   <property name="text">
+    <string>concentrado por adscripción</string>
+   </property>
+  </action>
+  <action name="actionConcentrado_por_banco">
+   <property name="text">
+    <string>Concentrado por banco</string>
+   </property>
+  </action>
+  <action name="actionPago_por_banco">
+   <property name="text">
+    <string>Pago por banco</string>
+   </property>
+  </action>
+  <action name="actionTimbrado">
+   <property name="text">
+    <string>Timbrado</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>325</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
