@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>590</width>
-    <height>234</height>
+    <height>298</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>SIRHUM :: Apertura de nomina</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="1">
@@ -95,7 +95,7 @@
         <rect>
          <x>210</x>
          <y>20</y>
-         <width>80</width>
+         <width>101</width>
          <height>20</height>
         </rect>
        </property>
@@ -163,10 +163,10 @@
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>300</x>
+         <x>320</x>
          <y>20</y>
          <width>31</width>
-         <height>16</height>
+         <height>20</height>
         </rect>
        </property>
        <property name="text">
@@ -176,7 +176,7 @@
       <widget class="QComboBox" name="comboBox">
        <property name="geometry">
         <rect>
-         <x>330</x>
+         <x>360</x>
          <y>20</y>
          <width>94</width>
          <height>20</height>
@@ -193,16 +193,6 @@
         </property>
        </item>
       </widget>
-      <zorder>label</zorder>
-      <zorder>comboBox_2</zorder>
-      <zorder>label_6</zorder>
-      <zorder>comboBox_3</zorder>
-      <zorder>label_2</zorder>
-      <zorder>comboBox</zorder>
-      <zorder>groupBox_2</zorder>
-      <zorder>groupBox_2</zorder>
-      <zorder>groupBox_2</zorder>
-      <zorder>groupBox_2</zorder>
      </widget>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
@@ -210,7 +200,7 @@
         <x>10</x>
         <y>80</y>
         <width>464</width>
-        <height>266</height>
+        <height>191</height>
        </rect>
       </property>
       <property name="title">
@@ -229,30 +219,16 @@
         <string>Nueva nomina</string>
        </property>
       </widget>
-      <widget class="QTreeWidget" name="treeWidget">
+      <widget class="QTreeView" name="treeView">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>50</y>
          <width>441</width>
-         <height>61</height>
+         <height>131</height>
         </rect>
        </property>
-       <column>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </column>
-       <item>
-        <property name="text">
-         <string>q</string>
-        </property>
-       </item>
       </widget>
-      <zorder>groupBox</zorder>
-      <zorder>pushButton</zorder>
-      <zorder>treeWidget</zorder>
-      <zorder>groupBox</zorder>
      </widget>
     </widget>
    </item>

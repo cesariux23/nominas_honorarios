@@ -4,8 +4,10 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QLabel
 from PyQt5 import uic
 from idQuincena import *
+from aperturaQuincenaDialog import AperturaQuincenaDialog
 
 Ui_nominaMainWindow, QtBaseClass = uic.loadUiType("../ui/widgets/nominaMainWindow.ui")
+apertura_quincena_dialog=None
 
 class NominaMainWindow(QMainWindow):
     def __init__(self):
@@ -20,11 +22,14 @@ class NominaMainWindow(QMainWindow):
         self.set_quincena()
         self.carga_quincena(self.quincena_actual)
 
+        #Eventos
+        self.ui.actionAperturar_nomina.triggered.connect(self.apertura_de_quincena)
+
     #muestra la fecha en el statusBar
     def set_fecha_actual(self):
         self.hoy=date.today()
         lb_fecha=QLabel(self)
-        lb_fecha.setText(self.hoy.strftime("%A %d de %B de %Y"))
+        lb_fecha.setText(self.hoy.strftime("%A %d de %B de %Y  "))
         self.statusBar().addPermanentWidget(lb_fecha)
 
     #establece la quincena actual
@@ -36,3 +41,10 @@ class NominaMainWindow(QMainWindow):
     def carga_quincena(self,qna):
         #self.ui.gp_nominas.show()
         pass
+
+    #
+    #Abre el dialogo para aperturar quincena
+    #
+    def apertura_de_quincena(self):
+        apertura_quincena_dialog=AperturaQuincenaDialog()
+        apertura_quincena_dialog.exec_()
