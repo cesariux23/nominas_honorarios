@@ -2,8 +2,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 from PyQt5 import uic
 import bcrypt
+from database import User
 
-from database import *
 
 Ui_loginDialog, QtBaseClass = uic.loadUiType("../ui/dialogs/loginDialog.ui")
 
@@ -16,18 +16,17 @@ class LoginDialog(QDialog):
 
     def valida(self, e):
         user=self.ui.txt_username.text()
-        password=self.ui.txt_password.text()
+        password=self.ui.txt_password.text().encode('utf-8')
         if not user and not password:
             QMessageBox.warning(self, "Inicio de sesión", "Faltan campos requeridos",QMessageBox.Ok)
         else:
-            passwordHash=bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt(10))
-            print(passwordHash)
+            #passwordHash=bcrypt.hashpw(password.encode('utf-8', bcrypt.gensalt(10))
             #se busca en la base de datos
             try:
                 usuario=User.select().where(User.username==user).get()
                 if(usuario):
                     #se compara la contraseña
-                    if(bcrypt.checkpw(password.encode('utf-8'),usuario.password.replace('$2y','$2b').encode('utf-8'))):
+                    if(bcrypt.checkpw(password,usuario.password.encode('utf-8'))):
                         self.accept()
                     else:
                         QMessageBox.warning(self, "Inicio de sesión", "Usuario y contraseña no validos",QMessageBox.Ok)
