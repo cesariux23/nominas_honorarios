@@ -9,7 +9,6 @@ class AperturaQuincenaDialog(QDialog):
         super(AperturaQuincenaDialog, self).__init__()
         self.ui = Ui_aperturaQuincenaDialog()
         self.ui.setupUi(self)
-        self.ui.
 
     # def keyPressEvent(self, e):
     #     if e.key() == Qt.Key_Escape:

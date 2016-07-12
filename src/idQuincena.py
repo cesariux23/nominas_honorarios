@@ -4,7 +4,7 @@ class IdQuincena():
     def __init__(self,fecha = date.today()):
         #Se desglosa la fecha recibida para calcular la quincena
         self.fecha_inicio=fecha
-        self.mes=fecha.day
+        self.mes=fecha.month
         self.anio=fecha.year
         self.quincena_del_mes(fecha.day)
         self.quincena_del_anio()
@@ -31,6 +31,7 @@ class IdQuincena():
         self.quincena=self.mes*2;
         if(self.quincena_mes==1):
             self.quincena-=1
+        print(self.quincena)
 
     #
     #Metodo que calcula el nombre de la quincena
